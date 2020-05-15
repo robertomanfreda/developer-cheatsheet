@@ -2,13 +2,13 @@
 ###### Just another useful set of commands for developers :penguin:
 
 ---
-#### Create bootable usb keys
+>#### Create bootable usb keys
 ```bash
 sudo dd if=/path/to/your/isofile of=/your/usb/disk
 ```
 
 ---
-#### Compression/Decompression (tar)
+>#### Compression/Decompression (tar)
 **Compress an entire directory or a single file**  
 ```bash
 tar -czvf archive.tar.gz /path/to/directory-or-file
@@ -44,7 +44,7 @@ tar -tvf archive.tar.gz
 ```
 
 ---
-#### SecureShell (ssh)
+>#### SecureShell (ssh)
 N.B.  
 For all the following commands, the port can be excluded if the ssh service is running on default port (22)  
   
@@ -71,7 +71,7 @@ ssh user@ip:port
 ```
 
 ---
-#### Secure Copy (scp)
+>#### Secure Copy (scp)
 
 **Copy the file "foobar.txt" from a remote host to the local host**
 ```bash
