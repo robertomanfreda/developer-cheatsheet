@@ -1,5 +1,5 @@
 # Developer CheatSheet
-#### Just another useful set of commands for developers 🐧🐧🐧🐧🐧🐧:penguin:
+#### Just another useful set of commands for developers :penguin:
 
 ---
 ###### Create bootable usb keys
