@@ -2,13 +2,13 @@
 ###### Just another useful set of commands for developers :penguin:
 
 ---
->#### Create bootable usb keys
+>##### Create bootable usb keys
 ```bash
 sudo dd if=/path/to/your/isofile of=/your/usb/disk
 ```
 
 ---
->#### Compression/Decompression (tar)
+>##### Compression/Decompression (tar)
 **Compress an entire directory or a single file**  
 ```bash
 tar -czvf archive.tar.gz /path/to/directory-or-file
@@ -44,7 +44,7 @@ tar -tvf archive.tar.gz
 ```
 
 ---
->#### SecureShell (ssh)
+>##### SecureShell (ssh)
 N.B.  
 For all the following commands, the port can be excluded if the ssh service is running on default port (22)  
   
@@ -71,7 +71,7 @@ ssh user@ip:port
 ```
 
 ---
->#### Secure Copy (scp)
+>##### Secure Copy (scp)
 
 **Copy the file "foobar.txt" from a remote host to the local host**
 ```bash
@@ -92,3 +92,47 @@ scp -r foo username@ip:/some/remote/directory/bar
 ```bash
 scp username@ip1:/some/remote/directory/foobar.txt username@ip2:/some/remote/directory/
 ``` 
+
+---
+>##### Networking
+>######Traffic analysis (tcpdump)
+
+**Dump all traffic**
+```bash
+sudo tcpdump
+```
+
+**Dump traffic for specific interface**
+```bash
+sudo tcpdump -i ens33
+```
+
+**Dump traffic for specific port port** 
+```bash
+sudo tcpdump port 8080
+```
+
+**Dump traffic for specific interface and port** 
+```bash
+sudo tcpdump -i ens33 port 8080
+```
+
+**Dump traffic ffor specific host**
+```bash
+sudo tcpdump host 192.168.1.130
+```
+
+**Dump traffic translating addresses**
+```bash
+sudo tcpdump -n
+```
+
+**Dump traffic writing to file**
+```bash
+sudo tcpdump -U -w dump.pcap
+```
+
+**Read file**
+```bash
+sudo tcpdump -r dump.pcap
+```
