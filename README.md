@@ -64,7 +64,7 @@ sudo apt install sshpass
 sshpass -p password ssh user@ip:port
 ```
 
-**Setup automatic SSH access with KeyPair**
+**Setup automatic ssh access with KeyPair**
 ```bash
 ssh-copy-id user@ip:port
 ssh user@ip:port
