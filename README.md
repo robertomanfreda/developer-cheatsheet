@@ -151,36 +151,36 @@ For all the following commands, the port can be excluded if the ssh service is r
 >```  
 &nbsp;
 
+##### Reversing
 >**Reverse ip-address**
 >```bash
 >nslookup IP_ADDRESS
 >```  
-&nbsp;
 
 >**Reverse domain**
 >```bash
 >dig +short google.com
 >```
+&nbsp;
 
-##### Show routes
->**route**
+##### Routes
+>**Show routes**
 >```bash
 >route -n
 >```
-
->**netstat**
+>or
 >```bash
 >netstat -rn
 >```
 
-##### Add routes
->**route**
+>**Add routes**
 >```bash
 >sudo route add example gw 192.168.1.1 metric 40 dev ens33
->```
+>```  
+&nbsp;
 
-##### Show policies
->**ip**
+##### Policies
+>**Show policies**
 >```bash
 >ip xfrm policy
 >```
