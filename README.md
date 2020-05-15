@@ -172,15 +172,25 @@ For all the following commands, the port can be excluded if the ssh service is r
 >```bash
 >netstat -rn
 >```
-
->**Add routes**
->```bash
->sudo route add example gw 192.168.1.1 metric 40 dev ens33
->```  
 &nbsp;
 
 ##### Policies
 >**Show policies**
 >```bash
->ip xfrm policy
+>sudo ip xfrm policy
+>```  
+&nbsp;
+
+##### Ip tables
+>**Show tables**
+>```bash
+>sudo iptables -S
 >```
+&nbsp;
+
+##### Ip rules
+>**Show rules**
+>```bash
+>sudo ip rule
+>```
+&nbsp;
