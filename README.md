@@ -194,3 +194,151 @@ For all the following commands, the port can be excluded if the ssh service is r
 >sudo ip rule
 >```
 &nbsp;
+
+##### Connections (nmcli)
+>**Connect**
+>```bash
+>sudo nmcli con up id MY_CONNECTION
+>```
+
+>**Disconnect**
+ >```bash
+ >sudo nmcli con down id MY_CONNECTION
+ >```
+&nbsp;
+
+
+##### Port scanning
+>**"PING" specific TCP port**
+>```bash
+>nc -z -v -t 127.0.0.1 4789
+>```
+
+>**"PING" specific UDP port**
+>```bash
+>nc -z -v -u 127.0.0.1 4789
+>```
+
+>**More info TCP single port**
+>```bash
+>sudo nmap -Pn -p 4789 127.0.0.1
+>```
+
+>**More info UDP single port**
+>```bash
+>sudo nmap -Pn -sU -p 4789 127.0.0.1
+>```
+
+>**More info whole net**
+>```bash
+>sudo nmap -Pn 127.0.0.1
+>```
+
+>**Guess Operating System**
+>```bash
+>sudo nmap -O 127.0.0.1
+>```
+
+>**Find vulnerabilities (BONUS)**
+>```bash
+>sudo nmap -Pn -sV -sC 127.0.0.1
+>```
+&nbsp;
+
+##### MAC address
+>**Show MAC**
+>```bash
+>ip link show
+>```
+
+>**MAC spoofing**
+>```bash
+>ip link set eth0 down
+>ip link set eth0 address 00:00:00:00:00:00
+>ip link set eth0 up
+>```
+&nbsp;
+
+---
+
+#### MISC
+
+##### Services/daemons (systemctl)
+>**Enable auto startup**
+>```bash
+>sudo systemctl enable sshd
+>```
+
+>**Disable auto startup**
+>```bash
+>sudo systemctl disable sshd
+>```
+
+>**Start service**
+>```bash
+>sudo systemctl start sshd
+>```
+
+>**Stop service**
+>```bash
+>sudo systemctl stop sshd
+>```
+
+>**Restart service**
+>```bash
+>sudo systemctl restart sshd
+>```
+
+>**Status service**
+>```bash
+>sudo systemctl status sshd
+>```
+
+>**Reload configuration files**
+>```bash
+>sudo systemctl daemon-reload
+>```
+&nbsp;
+
+##### Privileges
+>```bash
+>w
+>whoami
+>id
+>```
+&nbsp;
+
+##### Swap space
+>- Create a partition of preferred size (gparted)
+>- Get the partition UUID
+>```bash
+>sudo blkid /dev/nvme0n1p3
+>```
+>- Modify /etc/fstab
+>```bash
+>UUID=a8db2b2e-9776-4178-b93e-357bae5dd0b1 none swap sw 0 0
+>```
+>- Reboot
+&nbsp;
+
+##### Selinux
+>**Show status**
+>```bash
+>sestatus
+>```
+
+>**Disable temporary**
+>```bash
+>sudo setenforce 0
+>```
+
+>**Disable permanent**
+>```bash
+>vim /etc/sysconfig/selinux
+>```
+>SELINUX=disabled
+
+&nbsp;
+
+---
+Other updates will follow...
