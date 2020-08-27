@@ -308,7 +308,18 @@ For all the following commands, the port can be excluded if the ssh service is r
 >```
 &nbsp;
 
+##### Permissions
+>**Octal**  
+>```stat -c "%a %n" <FILENAME> | awk '{print $1}'```
+
+>**Symbolic**  
+>```ls -la | grep <FILENAME> | awk '{print $1}'```  
+>
+&nbsp;
+
+
 ##### Swap space
+>**Swap on disk**
 >- Create a partition of preferred size (gparted)
 >- Get the partition UUID
 >```bash
@@ -319,6 +330,19 @@ For all the following commands, the port can be excluded if the ssh service is r
 >UUID=a8db2b2e-9776-4178-b93e-357bae5dd0b1 none swap sw 0 0
 >```
 >- Reboot
+
+>**Swap on file**
+>- Disable exchanges   
+>```sudo swapoff -a```  
+>- Create swapfile  
+>```sudo dd if=/dev/zero of=/swapfile bs=1M count=8192```  
+>- Make the swapfile "swappable"  
+>```sudo mkswap /swapfile```  
+>- Turn on the swap  
+>```sudo swapon /swapfile```    
+>- Verify  
+>```grep SwapTotal /proc/meminfo```
+
 &nbsp;
 
 ##### Selinux
@@ -339,6 +363,3 @@ For all the following commands, the port can be excluded if the ssh service is r
 >SELINUX=disabled
 
 &nbsp;
-
----
-Other updates will follow...
