@@ -259,6 +259,39 @@ For all the following commands, the port can be excluded if the ssh service is r
 >```
 &nbsp;
 
+##### MAC address
+>**Show MAC**
+>```bash
+>ip link show
+>```
+
+---
+#### Docker  
+
+##### Simple mode
+>**Build image**  
+>```docker build -t foo:0.0.1-SNAPSHOT .```
+
+>**TAG image**  
+>```docker tag foo:0.0.1-SNAPSHOT myregistry.it/project/foo:0.0.1-SNAPSHOT```
+
+>**Registry Login**  
+>```docker login -u <user> -p <password> myregistry.it```
+
+>**Registry Logout**  
+>```docker logout myregistry.it```
+
+>**Push Image**  
+>```docker push myregistry.it/project/foo:0.0.1-SNAPSHOT```
+
+>**Inspect registry saved credentials**  
+>```cat ~/.docker/config.json```
+
+&nbsp;
+
+##### Swarm mode  
+// TODO
+
 ---
 
 #### MISC
