@@ -257,13 +257,6 @@ For all the following commands, the port can be excluded if the ssh service is r
 >ip link set eth0 address 00:00:00:00:00:00
 >ip link set eth0 up
 >```
-&nbsp;
-
-##### MAC address
->**Show MAC**
->```bash
->ip link show
->```
 
 ---
 #### Docker  
