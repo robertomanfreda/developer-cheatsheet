@@ -283,7 +283,58 @@ For all the following commands, the port can be excluded if the ssh service is r
 &nbsp;
 
 ##### Swarm mode  
-// TODO
+>**Ports to open**  
+>  - TCP 2366
+>  - TCP 2377
+>  - TCP_UDP 7946
+>  - UDP 4789
+
+>**Init swarm for manager node**  
+>```docker swarm init```  
+> This command register the current machine as Manager/Leader
+	
+>**Add manager**  
+>```docker swarm join --token <TOKEN_RELEASED_AFTER_INIT> IP:2377```
+
+>**Retrieve the manager token**  
+>```docker swarm join-token manager```
+
+>**Join workers**  
+>```docker swarm join --token <Token released after the manager join> MANAGER_IP:2377```
+
+>**Retrieve the token for joining workers (Run on the manager)**  
+
+>```docker swarm join-token worker```
+
+>**Show nodes from the manager**  
+>```docker node ls```
+
+>**Show services**  
+>```docker service ls```
+
+>**Remove services**  
+>```docker service rm <service_name or service_id>```
+
+>**Leave swarm**  
+> worker  
+>```$ docker swarm leave```  
+>  --  
+> manager  
+>```$ docker swarm leave --force```  
+
+>**Read services logs from manager**   
+> follow      
+>```docker service logs --follow <service_name or service_id>```  
+> --  
+> tail     
+>```docker service logs --tail 10 <service_name or service_id>```  
+> --  
+> all  
+>```docker service logs <service_name or service_id>```  
+> --  
+> since  
+>```docker service logs --since 60m <service_name or service_id>```  
+>
 
 ---
 
@@ -389,3 +440,4 @@ For all the following commands, the port can be excluded if the ssh service is r
 >SELINUX=disabled
 
 &nbsp;
+
