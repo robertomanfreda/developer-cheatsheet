@@ -311,6 +311,12 @@ For all the following commands, the port can be excluded if the ssh service is r
 >**Show services**  
 >```docker service ls```
 
+>**Create services**  
+>https://docs.docker.com/engine/reference/commandline/service_create/  
+ 
+>**Remove services**  
+>```docker service rm <service_name or service_id>```
+
 >**Deploy stack**  
 >**Simple**  
 >```docker stack deploy --compose-file <COMPOSE_FILE.yaml> <STACK_NAME>```     
@@ -319,10 +325,7 @@ For all the following commands, the port can be excluded if the ssh service is r
 >```docker stack deploy --with-registry-auth --compose-file <COMPOSE_FILE.yaml> <STACK_NAME>```    
 >
 >**Prune services that are no longer referenced**  
->```docker stack deploy--prune --compose-file <COMPOSE_FILE.yaml> <STACK_NAME>```   
-
->**Remove services**  
->```docker service rm <service_name or service_id>```
+>```docker stack deploy --prune --compose-file <COMPOSE_FILE.yaml> <STACK_NAME>```   
 
 >**Remove stack**   
 >```docker stack rm <STACK_NAME>```   
