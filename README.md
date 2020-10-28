@@ -316,24 +316,24 @@ For all the following commands, the port can be excluded if the ssh service is r
 >```docker service rm <service_name or service_id>```
 
 >**Leave swarm**  
-> worker  
->```$ docker swarm leave```  
->  --  
-> manager  
->```$ docker swarm leave --force```  
+> **worker**    
+>```docker swarm leave```    
+>   
+> **manager**    
+>```docker swarm leave --force```    
 
 >**Read services logs from manager**   
-> follow      
->```docker service logs --follow <service_name or service_id>```  
-> --  
-> tail     
->```docker service logs --tail 10 <service_name or service_id>```  
-> --  
-> all  
->```docker service logs <service_name or service_id>```  
-> --  
-> since  
->```docker service logs --since 60m <service_name or service_id>```  
+> **follow**        
+>```docker service logs --follow <service_name or service_id>```    
+>  
+> **tail**       
+>```docker service logs --tail 10 <service_name or service_id>```    
+>  
+> **all**    
+>```docker service logs <service_name or service_id>```    
+>  
+> **since**    
+>```docker service logs --since 60m <service_name or service_id>```    
 >
 
 ---
