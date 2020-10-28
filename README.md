@@ -302,9 +302,8 @@ For all the following commands, the port can be excluded if the ssh service is r
 >**Join workers**  
 >```docker swarm join --token <Token released after the manager join> MANAGER_IP:2377```
 
->**Retrieve the token for joining workers (Run on the manager)**  
-
->```docker swarm join-token worker```
+>**Retrieve the token for joining workers (Run on the manager)**    
+>```docker swarm join-token worker```  
 
 >**Show nodes from the manager**  
 >```docker node ls```
