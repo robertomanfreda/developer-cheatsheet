@@ -314,6 +314,9 @@ For all the following commands, the port can be excluded if the ssh service is r
 >**Create services**  
 >https://docs.docker.com/engine/reference/commandline/service_create/  
  
+ >**Scale services**   
+>```docker service scale <service_name or service_id>=<NUMBER_OF_REPLICAS>```   
+
 >**Remove services**  
 >```docker service rm <service_name or service_id>```
 
