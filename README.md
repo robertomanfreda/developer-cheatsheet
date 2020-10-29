@@ -356,6 +356,24 @@ For all the following commands, the port can be excluded if the ssh service is r
 
 ---
 
+#### Kubernetes  
+
+>**Apply services from yaml**   
+>```kubectl apply -f <FILENAME>.yaml```   
+
+>**Delete services from yaml**   
+>```kubectl delete -f <FILENAME>.yaml```  
+
+>**Delete services from yaml**   
+>```kubectl delete -f <FILENAME>.yaml```  
+
+
+# TODO  
+
+&nbsp;
+
+---
+
 #### MISC
 
 ##### Services/daemons (systemctl)
